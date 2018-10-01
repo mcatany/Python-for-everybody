@@ -1,5 +1,7 @@
 # Classes
+# Uses python3
 
+# Base class PartyAnimal
 class PartyAnimal:
     x = 0
     name = ""
@@ -11,7 +13,7 @@ class PartyAnimal:
         self.x = self.x + 1
         print("So far", self.x)
 
-
+# Child class FootballFan
 class FootballFan(PartyAnimal):
     points = 0
     def touchdown(self):
@@ -19,7 +21,10 @@ class FootballFan(PartyAnimal):
         self.party()
         print(self.name, "points", self.points)
 
-an = PartyAnimal("Sally")
-an.party()
-wentz = FootballFan("Carson")
-wentz.touchdown()
+		
+# Example of usage
+if __name__ == "__main__":	
+	an = PartyAnimal("Sally")
+	an.party()
+	wentz = FootballFan("Carson")
+	wentz.touchdown()

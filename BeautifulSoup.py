@@ -1,4 +1,5 @@
-# Beautiful Soup
+# Beautiful Soup (Coursera course)
+# Uses python3
 
 import urllib.parse, urllib.request, urllib.error
 from bs4 import BeautifulSoup
@@ -14,7 +15,8 @@ html = urllib.request.urlopen(url, context = ctx).read()
 
 soup = BeautifulSoup(html,"html.parser")
 
-
-tags = soup("a")
-for tag in tags:
-    print(tag.get("href", None))
+# Example of usage
+if __name__ == "__main__":	
+	tags = soup("a")
+	for tag in tags:
+		print(tag.get("href", None))
